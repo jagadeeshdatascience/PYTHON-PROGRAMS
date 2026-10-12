@@ -1,0 +1,96 @@
+# INTEGER DATATYPE
+
+# Question: Calculate the sum of first 5 even numbers
+n = int(input("Enter number: "))
+sum = 0
+for i in range(1,n+1):
+    if i % 2 == 0:
+        sum += i
+print(sum)
+
+# Calculate the product of first 10 natural numbers
+
+n = int(input("Enter a number: "))
+product = 1
+for i in range(1, n+1):
+    product *= i
+print(product)
+
+# Find the remainder when 156 is divided by 7
+
+n = int(input("Enter a number: "))
+remainder = n % 7
+print(remainder)
+
+# Calculate the square of 25
+
+n = int(input("Enter a number: "))
+square = n ** 2
+print(square)
+
+# Find the cube root of 125
+
+n = int(input("Enter a number: "))
+cube_root = n ** (1/3)
+print(cube_root)
+
+# Calculate the sum of digits in number 12345
+
+n = int(input("Enter a number: "))
+sum = 1
+for i in range(n):
+    d = n % 10
+    sum+= d
+    n = n // 10
+print(sum)
+
+# Check if 97 is a prime number
+
+n = int(input("Enter a number: "))
+if n % 4 == 0 and n % 100!=0:
+    print("it is leap year.")
+elif n % 100 == 0 and n % 400 == 0:
+    print("centurian leap year ")
+else:
+    print("Not leap year")
+
+# Find the factorial of 8
+
+n = int(input("Enter a number: "))
+fact = 1
+for i in range(1,n+1):
+    fact *= i
+print(fact)
+
+# Calculate the average of numbers: 15, 23, 31, 42, 56
+
+numbers = [15,23,31,42,56]
+sum = 0
+for i in range(len(numbers)):
+    sum += numbers[i]
+    average = (sum/len(numbers))
+print(average)
+
+# Find the greatest common divisor (GCD) of 48 and 36
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+while b!= 0:
+    a,b = b, a%b
+    gcd = a
+print("GCD", a)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+for i in range(1,min(a,b)+1):
+   if a % i == 0 and b % i == 0:
+    gcd = i
+print(gcd)
+
+# Calculate the sum of first 20 odd numbers
+n = int(input("Enter numbers: "))
+sum = 0
+for i in range(1,n+1):
+    if i % 2!= 0:
+        sum+= i
+print(sum)
