@@ -1,0 +1,400 @@
+# STRING DATATYPE
+# Count vowels in the string "Hello World"
+a = "Hello World"
+count = 0
+for i in a:
+    if i in 'aeiouAEIOU':
+        count+=1
+print(count)
+
+# Reverse the string "Python Programming"
+a = 'python programming'
+print(a[::-1])
+
+Check if "racecar" is a palindrome
+text = input("Enter string: ")
+reverse = text[::-1]
+if text == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# Count the number of words in "Python is a great programming language"
+text = 'python is a great programming language'
+count = 0
+for word in text.split():
+    count +=1
+print(count)
+
+# Convert "hello world" to title case
+
+a = "hello world"
+a = a.title()
+print(a)
+
+# Find the length of string "Data Science"
+string = 'Data Science'
+print(len(string))
+
+# Replace all spaces with underscores in "Machine Learning"
+text = 'Machine Learning'
+text = text.replace(' ','_')
+print(text)
+
+# Check if "python" is in "Python Programming Language"
+a = 'Python Programming Language'
+a = a.lower()
+if 'python' in a:
+    print("Python is present")
+else:
+    print("Python is not present")
+
+# Extract the first 5 characters from "Artificial Intelligence"
+a = 'Artificial Intelligence'
+text = a[:6]
+print(text)
+
+# convert UPPERCASE to lower case
+a = 'UPPERCASE'
+print(a.lower())
+
+# Remove all vowels from "Computer Science"
+a = 'computer science'
+result = ''
+for i in a:
+    if i not in 'aeiouAEIOU':
+        result+=i
+print(result)
+
+# Find the most frequent character in "mississippi"
+text = "mississippi"
+
+max_count = 0
+most_frequent = ""
+
+for i in text:
+    count = text.count(i)
+
+    if count > max_count:
+        max_count = count
+        most_frequent = i
+
+print("Most frequent character:", most_frequent)
+print("Count:", max_count)
+
+# Check if two strings are anagrams: "listen" and "silent"
+
+s1 = 'listen'
+s2 = 'silent'
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not anagram")
+
+# Capitalize first letter of each word in "python programming language
+text = 'python programming language'
+print(text.title())
+
+# Count consonants in "Hello World"
+
+a = "Hello World"
+count = 0
+for i in a:
+    if i not in 'aeiouAEIOU':
+        count += 1
+print(count)
+
+# Find the longest word in "Python is a programming language"
+text = 'Python is a programming language'
+text = text.split()
+longest = ''
+for i in text:
+    if len(i) > len(longest):
+        longest = i
+print(longest)
+# Remove all punctuation from "Hello, World! How are you?"
+text = "Hello, World! How are you?"
+result = ""
+for i in text:
+    if i.isalnum() or i == " ":
+        result = result + i
+
+print(result)
+
+# Check if string starts with "Python
+text = "python programming"
+if text.startswith("python"):
+    print("ok")
+else:
+   print("not ok")
+
+# Find the index of first occurrence of 'o' in "Hello World"
+a = 'Hello World'
+print(a.find('o'))
+
+# Split string "apple,banana,orange" by comma
+a = "apple,banana,orange"
+print(a,end=",")
+
+# Join list ['Python', 'is', 'awesome'] with spaces
+list = ['Python', 'is', 'awesome']
+result = " ".join(list)
+print(result)
+
+# Check if string contains only digits: "12345"
+string = '12345'
+if string.isdigit():
+    print("ok")
+else:
+    print("not ok")
+
+# Check if string contains only letters: "HelloWorld"
+string = 'HelloWorld'
+if string.isalpha():
+    print('OK')
+else:
+    print("not ok")
+
+# Convert "hello world" to "hElLo WoRlD" (alternating case)
+text = "hello world"
+result = ""
+
+count = 0
+
+for i in text:
+    if i == " ":
+        result = result + " "
+    elif count % 2 == 0:
+        result = result + i.lower()
+        count = count + 1
+    else:
+        result = result + i.upper()
+        count = count + 1
+
+print(result)
+
+# Find all positions of 'a' in "banana"
+text = 'banana'
+for i in range(len(text)):
+    if text[i] == 'a':
+        print(i)
+
+
+# Remove leading and trailing whitespace from "  Hello World  "
+a = "Hello World"
+a = a.trim
+print(a)
+
+# Check if string ends with "ing": "programming"
+a = 'programming'
+if a.endswith('ing'):
+    print("ok")
+else:
+    print('not ok')
+
+# Replace first occurrence of 'o' with '0' in "Hello World"
+a = 'Hello world'
+a = a.replace('o', str(0),1)
+print(a)
+
+# Find the shortest word in "Python is a programming language"
+text = 'Python is a programming language'
+text = text.split()
+smallest = text[0]
+for i in range(len(text)):
+    if len(text[i]) < len(smallest):
+        smallest = text[i]
+print(smallest)
+
+# Count words that start with 'p' in "Python programming is powerful"
+text = "Python programming is powerful"
+words = text.split()
+
+count = 0
+
+for i in words:
+    if i.lower().startswith("p"):
+        count = count + 1
+
+print(count)
+
+# reverse string without using slicin
+a = "python"
+rev = ""
+for i in a:
+    rev = i + rev
+print(rev)
+
+# palindrome
+a = "python"
+rev = ""
+for i in a:
+    rev = i + rev
+if rev == a:
+    print("Panlindrome")
+else:
+    print("NOt")
+
+
+numbers = [1,2,3,4,51,2,3,2,3,7,5]
+d = []
+seen=[]
+for i in numbers:
+    if i in seen:
+        d.append(i)
+    else:
+        seen.append(i)
+print(d)
+
+# s = "we are learning python,.python is fun for learning"
+s = s.replace("."," ").lower().replace(","," ").split()
+d = {}
+for i in s:
+    if i not in d:
+        d[i] = 1
+    else:
+        d[i] +=1
+print(d)
+
+# Reverse words in "Hello World Python"
+text = "Hello World Python"
+text = text.split()
+rev = " "
+for i in text:
+        rev = i + rev
+print(rev)
+
+# Check if string is a valid email format: "user@example.com"
+email = input("Enter email: ")
+if '@' in email and "." in email:
+    print("Ok")
+else:
+    print("No")
+# Extract domain from "https://www.example.com/path"
+url = "https://www.example.com/path"
+domain = url.split("/")[2]
+print(domain)
+
+# Count lines in multi-line string
+text = """Hello
+How are you?
+Welcome to Python
+Have a nice day"""
+
+count = text.splitlines()
+print(len(count))
+
+
+# Find common characters between "hello" and "world"
+
+s1 = "hello"
+s2 = 'world'
+d1 =[]
+d2 =[]
+for i in s1:
+    if i not in d1:
+        d1.append(i)
+for j in s2:
+    if j not in d2:
+        d2.append(j)
+for i in d1:
+    if i in d2:
+        print(i)
+
+# Check if string is a valid phone number: "+1-555-123-4567"
+number = "+1-555-123-4567"
+if "+" in number and "-" in number:
+        print("Ok")
+else:
+    print("NOT OK")
+
+# Extract numbers from "abc123def456ghi789"
+number = "abc123def456ghi789"
+for i in number:
+    if i.isdigit():
+        print(i,end=",")
+
+# Convert "snake_case" to "camelCase"
+text = "snake_case"
+text = text.split("_")
+result = text[0] + text[1].title()
+print(result)
+
+# Check if string is a valid palindrome ignoring case: "A man a plan a canal Panama"
+text = "A man a plan a canal Panama"
+text = text.replace(" ","").lower()
+rev = ""
+for i in text:
+    rev = i + rev
+if text == rev:
+    print("palindrome")
+else:
+    print("Not palindrome")
+print(text)
+print(rev)
+
+# Find the most common word in "the quick brown fox jumps over the lazy dog"
+text = "the quick brown fox jumps over the lazy dog"
+text = text.split()
+d = {}
+for i in text:
+    if i not in d:
+        d[i] = 1
+    else:
+        d[i] +=1
+common_word = max(d, key=d.get)
+print(common_word)
+
+# Generate acronym from "National Aeronautics and Space Administration"
+text = "National Aeronautics and Space Administration"
+text = text.split()
+acroynm = ""
+for i in text:
+    acroynm = acroynm + i[0]
+print(acroynm.upper())
+
+# Check if string contains balanced parentheses: "((()))"
+text = "((()))"
+count = 0
+for i in text:
+    if i == "(":
+        count +=1
+    elif i == ")":
+        count -= 1
+    if count <0:
+        break
+if count == 0:
+    print("Balanced")
+else:
+    print("Not ok")
+
+
+# Find the longest common substring between "programming" and "grammar"
+s1 = "programming"
+s2 = "grammar"
+
+longest = ""
+
+for i in range(len(s1)):
+    for j in range(i + 1, len(s1) + 1):
+        sub = s1[i:j]
+        if sub in s2 and len(sub) > len(longest):
+            longest = sub
+
+print(longest)
+
+# https://www.google.com"
+text = "https://www.google.com"
+if "www" in text and '.com' in text:
+    print("Ok")
+else:
+    print("Not ok")
+
+# Extract all words with length > 5 from "Python programming is amazing and powerful"
+text = "Python programming is amazing and powerful"
+text = text.split()
+d=[]
+for i in text:
+    if len(i)>5:
+        d.append(i)
+print(d)
