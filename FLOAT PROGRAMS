@@ -1,0 +1,70 @@
+# FLOAT DATATYPE
+
+# Calculate the area of a circle with radius 5.5
+
+radius = float(input("Enter radius: "))
+area = 3.14*(radius**2)
+print(area)
+
+# Calculate the average of 3.14, 2.718, 1.618, 0.577
+
+numbers = [3.14,2.718,1.618,0.577]
+sum = 0
+for i in range(len(numbers)):
+    sum+= numbers[i]
+    average = (sum/len(numbers))
+print(average)
+
+# Convert 98.6 Fahrenheit to Celsius (F = C * 9/5 + 32)
+fahrenheit = float(input("Enter a number: "))
+convert = ((fahrenheit-32) * 5/9)
+print(convert)
+
+# Calculate the compound interest on $1000 at 5.5% for 3 years
+P = int(input("Enter salary: "))
+R = float(input("Enter intrest: "))
+T = int(input("Enter year: "))
+A = P * (1 + R / 100) ** T
+c_p = A - P
+print(c_p)
+
+# Find the hypotenuse of a right triangle with sides 3.5 and 4.2
+side = float(input("Enter side1: "))
+side = float(input('Enter side2: '))
+hypotenuse = (side**2) + (side**2)
+print(hypotenuse)
+
+# Calculate the volume of a sphere with radius 7.8
+radius = float(input("Enter a number: "))
+volume = (4/3)*(3.14*radius*radius*radius)
+print(volume)
+
+# Round 3.14159 to 3 decimal places
+num = 3.14159
+result = round(num, 3)
+print(result)
+
+# Calculate the percentage: 45 out of 67
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+percentage = (num1/num2)*100
+print(percentage)
+
+# Find the square root of 23.456
+
+num = 23.456
+result = ((num)**0.5)
+print
+
+# Calculate the simple interest: Principal=2500, Rate=6.5%, Time=2.5 years
+
+principal = int(input("Enter principal amount: "))
+rate = float(input("Enter rate: "))
+time = float(input("Enter time: "))
+simple_intrest = ((principal)*(rate)*(time)/100)
+print(simple_intrest)
+
+# Convert 45.7 degrees to radians
+degree = 45.7
+radians = (degree) *(3.14/180)
+print(radians)
