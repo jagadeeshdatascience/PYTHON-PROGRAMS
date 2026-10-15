@@ -1,0 +1,285 @@
+# LIST DATATYPE
+
+# Find the maximum and minimum values in a list numbers = [23, 45, 12, 67, 34, 89, 56]
+numbers = [23, 45, 12, 67, 34, 89, 56]
+max_min = list(sorted(numbers))
+print(f"smallest_number: {max_min[0]},largest_number: {max_min[-1]}")
+
+# Question 1: Create a list of first 10 square numbers
+n = int(input("Enter a number: "))
+l = []
+for i in range(0,n+1):
+    l.append(i**2)
+print(l)
+
+# Question 2: Find the sum of all even numbers in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sum = 0
+for i in numbers:
+    sum+= i
+print(sum)
+
+# Question 3: Remove duplicates from [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
+numbers = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
+d = []
+o = []
+for i in numbers:
+    if i not in d:
+        d.append(i)
+    else:
+        o.append(i)
+print(d)
+
+# Question 4: Sort the list [64, 34, 25, 12, 22, 11, 90] in descending order
+numbers = [64, 34, 25, 12, 22, 11, 90]
+result = list(sorted(numbers))
+print(result[::-1])
+
+# Question 5: Find the average of numbers in [15, 23, 31, 42, 56, 78, 91]
+numbers = [15, 23, 31, 42, 56, 78, 91]
+sum = 0
+for i in numbers:
+    sum+= i
+    average = sum/len(numbers)
+print(average)
+
+# Question 6: Create a list of first 15 Fibonacci numbers
+n = int(input("Enter a number: "))
+a,b = 0,1
+print("fibanocci series")
+for i in range(n+1):
+    print(a,end=",")
+    a,b = b,a+b
+
+# Question 7: Find the second largest number in [45, 67, 23, 89, 12, 34, 78]
+numbers = [45, 67, 23, 89, 12, 34, 78]
+largest = numbers[0]
+second_largest = numbers[1]
+for i in numbers:
+    if i > largest:
+        second_largest = largest
+        largest = i
+    elif i > second_largest and i!= largest:
+        second_largest = i
+print(second_largest)
+
+# Question 8: Reverse the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+rev = []
+for i in range(len(numbers)-1,-1,-1):
+    rev.append(numbers[i])
+print(rev)
+
+# Question 9: Count how many times 5 appears in [1, 5, 2, 5, 3, 5, 4, 5, 6]
+numbers = [1, 5, 2, 5, 3, 5, 4, 5, 6]
+count = 0
+for i in numbers:
+    if i ==5:
+        count+=1
+print(count)
+
+# Question 10: Create a list of prime numbers between 1 and 50
+n = int(input("Enter a number: "))
+primes= []
+for i in range(2,n+1):
+    for j in range(2,i):
+        if i%j ==0:
+            break
+    else:
+        primes.append(i)
+print(primes)
+
+# Question 11: Flatten nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+num = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+result = []
+for i in num:
+    for j in i:
+        result.append(j)
+print(result)
+
+# Question 12: Find common elements between [1, 2, 3, 4, 5] and [4, 5, 6, 7, 8]
+l1 = [1, 2, 3, 4, 5]
+l2 = [4, 5, 6, 7, 8]
+l3=[]
+for i in l1:
+    for j in l2:
+        if i==j:
+           l3.append(i)
+print(l3)
+
+# Question 13: Create a list of lists: [[1, 2], [3, 4], [5, 6]]
+numbers = [[1, 2], [3, 4], [5, 6]]
+print(numbers)
+
+# Find the sum of each sublist in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+list =  [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for i in list:
+    sum=0
+    for j in i:
+        sum+=j
+    print(sum)
+
+# Question 15: Transpose the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+matrix = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+
+transpose = []
+
+for i in range(len(matrix)):
+    row = []
+    for j in range(len(matrix)):
+        row.append(matrix[j][i])
+    transpose.append(row)
+
+print(transpose)
+
+# Question 16: Find the maximum value in each sublist of [[1, 5, 3], [9, 2, 7], [4, 8, 6]]
+list = [[1, 5, 3], [9, 2, 7], [4, 8, 6]]
+for i in list:
+    max = i[0 ]
+    for j in i:
+        if j > max:
+            max = j
+    print(max)
+
+# Question 17: Create a 3D list: [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+list = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+print(list)
+
+# Question 18: Find the sum of all elements in 3D list [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+list = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+for i in list:
+    for j in i:
+        sum = 0
+        for k in j:
+            sum+=k
+        print(sum)
+
+# Question 19: Extract all even numbers from nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for i in list:
+    for j in i:
+        if j%2 == 0:
+            print(j)
+
+# Question 20: Create a list of mixed data types: [1, "hello", 3.14, True, [1, 2, 3]]
+mixed_data_types= [1, "hello", 3.14, True, [1, 2, 3]]
+print(mixed_data_types)
+
+# Question 21: Find the length of each string in ["apple", "banana", "cherry", "date"]
+list = ["apple", "banana", "cherry", "date"]
+for i in list:
+    print(len(i))
+
+# Question 22: Create a list of tuples: [(1, 'a'), (2, 'b'), (3, 'c')]
+list_tuples =  [(1, 'a'), (2, 'b'), (3, 'c')]
+print(list_tuples)
+
+
+# Question 23: Extract first element from each tuple in [(1, 'a'), (2, 'b'), (3, 'c')]
+tuple = [(1, 'a'), (2, 'b'), (3, 'c')]
+for i in range(len(tuple)):
+    print(tuple[i][0])
+
+# Question 24: Create a list of dictionaries: [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+list_dict = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+print(list_dict)
+
+# Question 25: Extract all 'name' values from list of dictionaries
+dict = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+for i in dict:
+    print(i['name'])
+
+# Question 26: Find the person with maximum age in list of dictionaries
+dict = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+max_age = 0
+person = ""
+for i in dict:
+    if i['age'] > max_age:
+        max_age = i["age"]
+        person = i["name"]
+print(f"max__age: {max_age}\nperson1: {person}")
+
+# Question 27: Create a 4D list: [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
+list = [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
+print(list)
+
+
+# Question 28: Find the maximum value in 4D list
+list =  [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
+biggest = 0
+for i in list:
+    for j in i:
+        for k in j:
+            for m in k:
+                if m >biggest:
+                    biggest = m
+print(biggest)
+
+# Question 29: Create a list of sets: [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+list_of_set =  [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+print(list_of_set)
+
+
+# Question 30: Find the union of all sets in list of sets
+list = [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+result = set()
+for i in list:
+    result = result.union(i)
+print(result)
+
+# Question 31: Create a list of complex numbers: [1+2j, 3+4j, 5+6j]
+complex_list = [1+2j, 3+4j, 5+6j]
+print(complex_list)
+
+# Question 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]
+nested_list = [1, [2, 3], [4, [5, 6]], 7]
+print(nested_list)
+
+# Question 34: Count the depth of nesting in [1, [2, 3], [4, [5, 6]], 7]
+data = [1, [2, 3], [4, [5, 6]], 7]
+depth = 1
+for i in data:
+    if type(i) == list:
+        depth = 2
+        for j in i:
+            if type(j) == list:
+                depth = 3
+print(depth)
+
+# Question 35: Create a list of functions: [len, str, int, float]
+list = [len, str, int, float]
+print(list)
+
+# Question 36: Apply each function in list to string "123"
+functions = [int, str, float]
+text = "123"
+for i in functions:
+    print(i(text))
+
+# Question 37: Create a list of lambda functions: [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+lamda_functions = [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+print(lamda_functions)
+
+# Question 38: Apply each lambda function to 5
+function = [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+for i in function:
+    print(i(5))
+
+# Question 39: Create a list of classes: [list, dict, set, tuple]
+list_of_classes = [list, dict, set, tuple]
+print(list_of_classes)
+
+# Question 45: Create a list of ranges: [range(3), range(5), range(2)]
+list = [range(3), range(5), range(2)]
+print(list)
+
+# Question 46: Convert each range to list
+data = [range(3), range(5), range(2)]
+list1 = []
+
+for i in data:
+    a = list(i)
+    list1.append(a)
+print(list1)
